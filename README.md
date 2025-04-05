@@ -14,7 +14,7 @@ These instructions will help you create a new Go Gin project and guide you on ho
    go-blueprint create --name aws-lambda-go-tutorial --framework gin --driver none --git skip
    ```
 
-2. Once the necessary changes are made to the API source code, it can be bundled for AWS Lambda. It's [recommended](https://aws.amazon.com/blogs/apn/comparing-aws-lambda-arm-vs-x86-performance-cost-and-analysis-2/) to compile the application for ARM64 instruction:
+2. Once the necessary changes are made to the API source code, it can be bundled for AWS Lambda. It's [recommended](https://aws.amazon.com/blogs/apn/comparing-aws-lambda-arm-vs-x86-performance-cost-and-analysis-2/) to use ARM compute for Lambda functions:
 
    ```bash
    GOOS=linux GOARCH=arm64 go build -o main cmd/api/main.go
